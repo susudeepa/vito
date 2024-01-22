@@ -16,9 +16,9 @@ app.get('/invite', (req, res) => res.redirect('https://discord.com/api/oauth2/au
 app.post("/submit", (req, res) => {
   const { username, word } = req.body;
 
-  
+
   const channel = client.channels.cache.get("1100294785316704310"); 
-  
+
     channel.send(`New message submission <@908287391217905684>!\nUsername: ${username}\nWord: ${word}`);
     return res.send('Message submitted!');
 });
